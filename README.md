@@ -4,6 +4,8 @@
 # react-native-animate-slider
 React Native Animate Carousel Slider 
 
+![GIF](final.gif)
+
 Features
 An example of a one-page carousel prepared on FlatList. It is built with the React Native Animate library.
 
