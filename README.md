@@ -19,3 +19,19 @@ yarn install
 npx pod-install
 ```
 
+## Usage
+
+```javascript
+
+
+// ...
+
+render() {
+  return (<Slider sliderData={[
+    'http://placeimg.com/640/480/any',
+    'http://placeimg.com/640/480/any',
+    'http://placeimg.com/640/480/any'
+  ]}/>)
+}
+```
+
