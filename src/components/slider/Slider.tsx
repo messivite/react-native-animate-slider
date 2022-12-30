@@ -25,7 +25,7 @@ const { width, height } = Dimensions.get('screen');
 const Slider = ({ sliderData }: any) => {
 
     const isDarkMode = useColorScheme() === 'dark';
-    const [currentPage, setCurrentPage] = useState(1);
+    const [currentPage, setCurrentPage] = useState(0);
     const backgroundStyle = {
         backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
         flex: 1
@@ -38,7 +38,7 @@ const Slider = ({ sliderData }: any) => {
     const scrollX = React.useRef(new Animated.Value(0)).current;
 
     const onScrollEnd = (e: any) => {
-        let pageNumber = Math.min(Math.max(Math.floor(e.nativeEvent.contentOffset.x / width + 0.5) + 1, 0), data.length);
+        let pageNumber = Math.min(Math.max(Math.floor(e.nativeEvent.contentOffset.x / width + 0.5), 0), data.length);
         setCurrentPage(pageNumber)
     }
 
